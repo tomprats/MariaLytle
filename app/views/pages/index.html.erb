@@ -1,0 +1,57 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=842349585775985&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="container-fluid main text-center">
+  <h1>Maria Lytle Music</h1>
+  <div class="row">
+    <% @videos.each do |video| %>
+      <div class="col-md-6 col-lg-4 col-xl-3 margin-bottom-30">
+        <div class="youtube-box" data-toggle="tooltip" data-placement="top" title=""
+          data-original-title="<%= video[:description] %>"
+          data-id="<%= video[:id] %>"
+          data-ratio="<%= video[:ratio] %>">
+          <%= image_tag video[:thumbnail], class: "youtube-image" %>
+          <div class="youtube-link">
+            <%= fa_icon("youtube-play") %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="sidebar">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="fb-post" data-href="<%= post["link"] %>" data-width="400"></div>
+    </div>
+  <% end %>
+</div>
+
+<!-- Modal -->
+<div class="youtube-modal modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Youtube</h4>
+      </div>
+      <div class="modal-body text-center">
+        <div id="player"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Youtube -->
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
