@@ -7,8 +7,16 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="container-fluid main text-center">
+<div class="container-fluid text-center" id="youtube">
   <h1>Maria Lytle Music</h1>
+
+  <div class="visible-xs-block mobile-margin-10 text-center">
+    <div class="btn-group">
+      <%= link_to "Youtube Videos", "#youtube", class: "btn btn-primary" %>
+      <%= link_to "Facebook Posts", "#facebook", class: "btn btn-primary" %>
+    </div>
+  </div>
+
   <div class="row">
     <% @videos.each do |video| %>
       <div class="col-md-6 col-lg-4 col-xl-3 margin-bottom-30">
@@ -25,12 +33,26 @@
     <% end %>
   </div>
 </div>
-<div class="sidebar">
+<div id="facebook">
+  <div class="visible-xs-block mobile-margin-10 text-center">
+    <div class="btn-group">
+      <%= link_to "Youtube Videos", "#youtube", class: "btn btn-primary" %>
+      <%= link_to "Facebook Posts", "#facebook", class: "btn btn-primary" %>
+    </div>
+  </div>
+
   <% @posts.each do |post| %>
     <div class="post">
       <div class="fb-post" data-href="<%= post["link"] %>" data-width="400"></div>
     </div>
   <% end %>
+</div>
+
+<div class="visible-xs-block mobile-margin-10 text-center">
+  <div class="btn-group">
+    <%= link_to "Youtube Videos", "#youtube", class: "btn btn-primary" %>
+    <%= link_to "Facebook Posts", "#facebook", class: "btn btn-primary" %>
+  </div>
 </div>
 
 <!-- Modal -->

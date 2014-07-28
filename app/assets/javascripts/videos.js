@@ -4,39 +4,41 @@ $(document).ready(function() {
   $(document).on("click", ".youtube-box", function(e) {
     e.preventDefault();
 
-    $(".youtube-modal").modal("show");
+    var width = 500;
+    var $this = $(this);
     player = new YT.Player("player", {
-      width: "500",
-      height: $(this).data("ratio")*500,
-      videoId: $(this).data("id")
+      width: width,
+      height: $this.data("ratio") * width,
+      videoId: $this.data("id")
     });
+    $("#player").data("ratio", $this.data("ratio"));
+    $(".youtube-modal").modal("show");
 
     return false;
+  });
+
+  if($("#youtube").css("margin-right") != "0px") {
+    $(".youtube-box").tooltip();
+  }
+
+  $(".youtube-modal").on("shown.bs.modal", function (e) {
+    if($("#youtube").css("margin-right") == "0px") {
+      resizeYoutube($("#player"));
+    }
   });
 
   $(".youtube-modal").on("hide.bs.modal", function (e) {
     player.destroy();
   });
-
-  $(".youtube-box").tooltip();
 });
 
-function sizeYoutube(video) {
-  video.data("aspectRatio", video[0].height / video[0].width);
-
+function resizeYoutube(video) {
   // Resize all videos according to their own aspect ratio
   $(window).resize(function() {
-    var newWidth = video.parent()[0].offsetWidth;
+    var newWidth = video.parent()[0].offsetWidth - 30; // Subtract Padding
 
     video
       .width(newWidth)
-      .height(newWidth * video.data("aspectRatio"));
+      .height(newWidth * video.data("ratio"));
   }).resize();
-}
-function old(video) {
-  var $allVideos = $(".youtube");
-
-  $allVideos.each(function() {
-    sizeYoutube($(this));
-  });
 }
