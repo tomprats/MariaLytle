@@ -1,0 +1,32 @@
+@import "bootstrap/variables";
+
+nav {
+  margin-top: 10px;
+  button.navbar-toggle {
+    width: 100%;
+    float: none;
+    background-color: $brand-primary;
+  }
+  h3 {
+    color: white;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: $grid-float-breakpoint) {
+  nav {
+    margin-top: 0;
+    button.navbar-toggle {
+      margin: 0;
+      border-radius: 0;
+    }
+    .navbar-collapse {
+      margin-top: -1px;
+      padding: 0;
+      background-color: $gray-lighter;
+      li {
+        display: block;
+      }
+    }
+  }
+}
