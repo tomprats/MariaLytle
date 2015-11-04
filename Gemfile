@@ -1,7 +1,10 @@
 source "https://rubygems.org"
 
+ruby "2.2.2"
+
 # Back End
 gem "rails", "4.1.4"
+gem "thin"
 gem "pg"
 gem "google-api-client"
 gem "koala"
