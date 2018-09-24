@@ -4,7 +4,7 @@ ruby "2.5.0"
 
 # Back End
 gem "rails"
-gem "thin"
+gem "unicorn"
 gem "pg"
 
 # Front End
