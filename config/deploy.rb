@@ -7,7 +7,16 @@ set :repo_url, "git@github.com:tomprats/marialytle.git"
 
 # Rails options
 set :keep_assets, 3
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+append(
+  :linked_dirs,
+  "log",
+  "tmp/pids",
+  "tmp/cache",
+  "tmp/sockets",
+  "vendor/bundle",
+  "public/system",
+  "public/uploads"
+)
 set :migration_role, :app
 
 # Other plugin options

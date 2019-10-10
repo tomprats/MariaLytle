@@ -1,0 +1,26 @@
+@import "~@fortawesome/fontawesome-pro/css/all";
+@import "~bootstrap-scss/bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:700);
+@import "header.scss";
+@import "navbar.scss";
+
+.content {
+  margin-top: 20px;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 30px;
+  font-size: 18px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+@include media-breakpoint-down(md) {
+  .content {
+    margin-top: 0;
+  }
+  h3 {
+    margin-top: 20px;
+  }
+}
