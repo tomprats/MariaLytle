@@ -21,20 +21,22 @@ export default class Contact extends Component {
       <div className="container-fluid content">
         <h3 className="text-center">Shows</h3>
         {loaded ? (
-          <div className="row">
-            {(shows.length > 0) && (
-              <div className="col-md-6 offset-md-3">
-                {shows.map((show) => {
+          <div className="row text-center">
+            <div className="col-md-6 offset-md-3">
+              {(shows.length > 0) ? (
+                shows.map((show) => {
                   const date = new Date(show.date);
 
                   return (
-                    <p key={show.id} className="mb-1 text-center">
+                    <p key={show.id} className="mb-1">
                       <i>{date.toLocaleDateString("en-US", dateOptions)}</i> - {show.venue}
                     </p>
                   );
-                })}
-              </div>
-            )}
+                })
+              ) : (
+                <p>There are no upcoming shows</p>
+              )}
+            </div>
           </div>
         ) : (
           <Loading className="text-center" />
