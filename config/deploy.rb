@@ -5,17 +5,23 @@ set :application, "marialytle"
 set :keep_releases, 3
 set :repo_url, "git@github.com:tomprats/marialytle.git"
 
+# Webpack
+set :default_env, {"NODE_ENV" => "production"}
+
 # Rails options
+set :assets_prefix, "packs"
 set :keep_assets, 3
 append(
   :linked_dirs,
   "log",
+  "node_modules",
+  "public/packs",
+  "public/system",
+  "public/uploads",
   "tmp/pids",
   "tmp/cache",
   "tmp/sockets",
-  "vendor/bundle",
-  "public/system",
-  "public/uploads"
+  "vendor/bundle"
 )
 set :migration_role, :app
 

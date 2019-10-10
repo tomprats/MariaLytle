@@ -2,18 +2,12 @@ source "https://rubygems.org"
 
 ruby "2.5.0"
 
-# Back End
+gem "bcrypt"
+gem "haml"
+gem "pg"
 gem "rails"
 gem "unicorn"
-gem "pg"
-
-# Front End
-gem "haml"
-gem "uglifier"
 gem "webpacker"
-
-# Other
-gem "bcrypt"
 
 group :development do
   gem "capistrano-postgresql"
