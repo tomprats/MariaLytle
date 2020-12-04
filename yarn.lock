@@ -782,11 +782,6 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@fortawesome/fontawesome-pro@^5.11.2":
-  version "5.11.2"
-  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-pro/-/fontawesome-pro-5.11.2.tgz#4c055b486f2ec488ef982133703879176efa7f54"
-  integrity sha512-qDJHtsCBkGqVM1i10aTjl1WCB/YPCxYYn7lQZNXDqo0yHzBXiwrwv2RXDV4vWgFP7fvCeqKVkP0Co2YQnkTxJg==
-
 "@rails/ujs@^6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.0.0.tgz#6c1957870ba075f7e82fdf875f5ed2181ff9355e"
@@ -835,6 +830,11 @@
     webpack-assets-manifest "^3.1.1"
     webpack-cli "^3.3.2"
     webpack-sources "^1.3.0"
+
+"@tomprats/fontawesome-pro@^5.13.0":
+  version "5.13.0"
+  resolved "https://npm.pkg.github.com/download/@tomprats/fontawesome-pro/5.13.0/8e8e1a11610c804c56de0f62623d4c72829350bf814a7f1a23f0d44857efebcc#a4cd88b1f14e3c492cf737ce3436fbeb56c681c0"
+  integrity sha512-NmcmjFQq64/kiAjrmrXuTY+3xuSmUuX4eNd+RIjoMMIg6PPHNxXfO11FeqtehIWaTbQZrBfkyXGJvvwiyOZKDw==
 
 "@types/events@*":
   version "3.0.0"

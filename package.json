@@ -8,7 +8,7 @@
     "@babel/plugin-transform-proto-to-assign": "^7.5.5",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
-    "@fortawesome/fontawesome-pro": "^5.11.2",
+    "@tomprats/fontawesome-pro": "^5.13.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^4.0.7",
     "babel-loader": "^8.0.6",
