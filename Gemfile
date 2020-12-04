@@ -9,6 +9,10 @@ gem "rails"
 gem "unicorn"
 gem "webpacker"
 
+# OpenSSH
+gem "bcrypt_pbkdf"
+gem "ed25519"
+
 group :development do
   gem "capistrano-postgresql"
   gem "capistrano-rails"

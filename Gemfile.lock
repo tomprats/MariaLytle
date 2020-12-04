@@ -78,6 +78,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.0)
     bcrypt (3.1.13)
+    bcrypt_pbkdf (1.0.1)
     better_errors (2.5.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -110,6 +111,7 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     debug_inspector (0.0.3)
+    ed25519 (1.2.4)
     erubi (1.9.0)
     ffi (1.11.1)
     globalid (0.4.2)
@@ -236,6 +238,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  bcrypt_pbkdf
   better_errors
   binding_of_caller
   capistrano-postgresql
@@ -244,6 +247,7 @@ DEPENDENCIES
   capistrano-rvm
   capistrano-secrets-yml
   capistrano-unicorn-nginx!
+  ed25519
   haml
   listen
   pg
